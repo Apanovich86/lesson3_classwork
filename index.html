@@ -116,27 +116,31 @@
     let array3 = [{name: 'Dima', age: 13}, {model: 'Camry'}];
 
     function keysObjects(arr) {
+        let arrKey = [];
         for (let arrayElement of arr) {
             for (let key in arrayElement) {
-                console.log(key);
+               arrKey.push(key);
             }
         }
+        return arrKey;
     }
-
-    keysObjects(array3);
+   let mas = keysObjects(array3);
+    console.log(mas);
 
     //     - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
     // EXAMPLE:
     //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
     function valueObjects(arr) {
+        let arrValue = [];
         for (let arrayElement of arr) {
             for (let key in arrayElement) {
-                console.log(arrayElement[key]);
+                arrValue.push(arrayElement[key]);
             }
         }
+        return arrValue;
     }
-
-    valueObjects(array3);
+    let massiv = valueObjects(array3);
+    console.log(massiv);
 
     // - створити функцію  яка скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
     //     EXAMPLE:
@@ -209,7 +213,7 @@
     // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
     let array10 = [ 'a', 'b', 'c'];
     let word = "";
-    for (i=0; i<array10.length; i++){
+    for (let i=0; i<array10.length; i++){
         word = word + array10[i];
     }
     console.log(word);
